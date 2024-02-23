@@ -1,0 +1,5 @@
+@media (width >=600px) {
+    :root {
+        --fs-html: 16px;
+    }
+}
