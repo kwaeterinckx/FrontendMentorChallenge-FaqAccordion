@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
             faqQuestion.classList.toggle("faq__question--open");
             faqQuestion.nextElementSibling.classList.toggle("faq__answer--open");
 
-            //* Set height on selected question
+            //* Set height on selected answer
             const faqOpenAnswer = document.querySelector(".faq__answer--open");
             if (faqOpenAnswer) {
                 faqOpenAnswer.style.height = faqOpenAnswer.getAttribute("data-height");
