@@ -43,16 +43,18 @@ body {
 /* FAQ card */
 .faq__main {
     background-color: var(--clr-white);
-    margin-block: 8rem;
+    margin-block: 8rem 0;
     margin-inline: auto;
     padding: 1.5rem 1.5rem 0;
     border-radius: .5rem;
     max-width: 600px;
+    position: relative;
+    box-shadow: 0 2rem 2rem hsla(0, 0%, 0%, 0.1);
 }
 
 /* FAQ title */
 .faq__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-variation-settings: "wght" 700;
     line-height: 3;
     position: relative;
@@ -152,14 +154,11 @@ body {
 
 /* Footer */
 .attribution {
-    position: absolute;
-    left: 0;
-    bottom: 0;
     text-align: center;
     width: 100%;
-    padding-inline: 1.5rem;
     font-size: .75rem;
-    line-height: 5em;
+    height: 8rem;
+    padding-top: 3rem;
 }
 
 .attribution a {
