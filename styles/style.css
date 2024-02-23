@@ -26,4 +26,121 @@ body {
 
 /* Utility classes */
 
-/* Section */
+/* Banner Background */
+.bg__img {
+    position: absolute;
+    width: 100%;
+    height: 232px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../assets/images/background-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* FAQ card */
+.faq__main {
+    background-color: var(--clr-white);
+    margin: 8rem 1.5rem;
+    padding: 1.5rem 1.5rem 0;
+    border-radius: .5rem;
+}
+
+/* FAQ title */
+.faq__title {
+    font-size: 2rem;
+    font-variation-settings: "wght" 700;
+    line-height: 3;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.faq__title::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/images/icon-star.svg);
+    background-size: contain;
+    width: 1em;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 0;
+    top: calc(50% - .5em);
+}
+
+/* FAQ Question */
+.faq__question {
+    font-size: 1.1rem;
+    font-variation-settings: "wght" 600;
+    text-decoration: none;
+    line-height: 1.2;
+    display: block;
+    padding: 1.25em 3.5rem 1.25em 0;
+    position: relative;
+    border-top: 1px solid var(--clr-light-pink);
+    color: var(--clr-dark-purple);
+}
+
+.faq__question:is(:hover, :focus-visible) {
+    color: var(--clr-pink);
+}
+
+.faq__question:first-of-type {
+    border: none;
+}
+
+.faq__question span {
+    position: absolute;
+    right: 0;
+    top: calc(50% - .8em);
+    display: block;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--clr-pink);
+    transition: background-color 250ms ease;
+}
+
+.faq__question span::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 1px;
+    background-color: var(--clr-white);
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    transition:
+        transform 500ms ease,
+        opacity 500ms ease;
+}
+
+.faq__question span::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 13px;
+    background-color: var(--clr-white);
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    transition: transform 500ms ease;
+}
+
+.faq__question--open span {
+    background-color: var(--clr-dark-purple);
+}
+
+.faq__question--open span::before {
+    transform: rotate(270deg);
+    opacity: 0;
+}
+
+.faq__question--open span::after {
+    transform: rotate(270deg);
+}
+
+/* FAQ answer */
+.faq__answer {
+    color: var(--clr-grayish-purple);
+}
