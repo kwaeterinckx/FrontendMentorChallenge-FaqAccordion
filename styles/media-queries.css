@@ -2,4 +2,8 @@
     :root {
         --fs-html: 16px;
     }
+
+    .bg__img {
+        height: 320px;
+    }
 }
